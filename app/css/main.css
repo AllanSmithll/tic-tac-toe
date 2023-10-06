@@ -1,0 +1,95 @@
+@import 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+:root {}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f2f2f2;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--bordas);
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+#tictactoe-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.btn-group {
+    justify-content: center;
+    padding-bottom: 50px;
+    margin-top: 10px;
+}
+
+#footer {
+    bottom: 0;
+    background-color: var(--bordas);
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+.fa-github {
+    color: #fff;
+}
+
+@media (max-width: 640px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    #tictactoe-main {
+        padding: 50px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1007px) {
+
+    h1 {
+        font-size: 35px;
+    }
+
+    #tictactoe-main {
+        padding: 100px;
+    }
+}
+
+@media (min-width: 1008px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    #tictactoe-main {
+        padding: 150px;
+    }
+}
