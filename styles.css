@@ -58,6 +58,10 @@ h1 {
     border: 5px solid #000;
 }
 
+#status-message {
+    margin: 30px 0 30px 0;
+}
+
 #footer {
     bottom: 0;
     background-color: var(--bordas);
