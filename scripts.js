@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const board = document.getElementById('game-board');
+    const board = document.getElementById('board');
     const cells = document.querySelectorAll('.cell');
     const statusMessage = document.getElementById('status-message');
+    const restartButton = document.getElementById('restart-button');
 
     let currentPlayer = 'X';
     let gameBoard = ['', '', '', '', '', '', '', '', ''];
@@ -16,14 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 cell.textContent = currentPlayer;
                 
                 if (checkWinner()) {
-                    statusMessage.textContent = `Jogador ${currentPlayer} venceu!`;
+                    statusMessage.textContent = `${currentPlayer} venceu!`;
                     gameActive = false;
+                    restartButton.style.display = 'block';
                 } else if (gameBoard.every(cell => cell !== '')) {
                     statusMessage.textContent = 'O jogo empatou!';
                     gameActive = false;
                 } else {
                     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-                    statusMessage.textContent = `É a vez do Jogador ${currentPlayer}`;
+                    statusMessage.textContent = `É a vez do ${currentPlayer}`;
                 }
             }
         });
@@ -41,4 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
             return gameBoard[a] !== '' && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c];
         });
     }
+
+    restartButton.addEventListener('click', () => {
+        gameBoard = ['', '', '', '', '', '', '', '', ''];
+        gameActive = true;
+        currentPlayer = 'X';
+        statusMessage.textContent = `É a vez do ${currentPlayer}`;
+        cells.forEach(cell => cell.textContent = '');
+        restartButton.style.display = 'none';
+    });
 });
