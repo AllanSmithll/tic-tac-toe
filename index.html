@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./app/css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header id="header" class="bg-dark text-white">
@@ -23,22 +23,25 @@
             <div class="cell" data-index="7"></div>
             <div class="cell" data-index="8"></div>
         </div>
+        <span class="message">Gays</span>
     </main>
     <footer id="footer" class="bg-dark text-white">
         <div class="container text-center">
             <p>&copy; Copyright 2023<span id="year"></span> Tic Tac Toe. Todos os direitos reservados.</p>
-            <li class="list-social">
-                <a
-                href="https://github.com/AllanSmithll"
-                target="_blank" 
-                rel="noopener noreferrer"
-            >
-                <i class="fa-brands fa-github"></i>
-            </li>
+            <ul class="list-group">
+                <li class="list-social">
+                    <a title="GitHub"
+                    href="https://github.com/AllanSmithll/tic-tac-toe"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-github"></i>
+                </li>
+            </ol>
         </div>
     </footer>
     <script src="https://kit.fontawesome.com/df01369163.js" crossorigin="anonymous"></script>
-    <script src="./app/js/app.js"></script>
+    <script src="scripts.js"></script>
     <script>
         const spanYearFooter = document.getElementById("year");
         const ano = new Date().getFullYear();
