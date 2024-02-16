@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (gameBoard.every(cell => cell !== '')) {
                     statusMessage.textContent = 'O jogo empatou!';
                     gameActive = false;
+                    restartButton.style.display = 'block';
                 } else {
                     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
                     statusMessage.textContent = `É a vez do ${currentPlayer}`;
